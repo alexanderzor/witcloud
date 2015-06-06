@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main_content %}
+	<section class="paper-sec">
+		<div class="paper-wrap">
+			<div class="picture-ribbons">
+				Благодарности
+				<div class="ribbon-text left-ribbon">
+					<a href="{% url 'index' %}">Назад в личный кабинет</a>
+				</div>
+				<div class="ribbon-text right-ribbon">Добавить</div>
+			</div>
+			<ul class="all-thanxs">
+
+                {% for thank in thanks  %}
+				<a href="#">
+					<li>
+						<p class="text-thx">
+							{{thank.description}}
+						</p>
+						<p class="from-thx">
+							<span>{{thank.author.email}}, </span>
+							{{thank.date}}
+						</p>
+					</li>
+				</a>
+                {% endfor %}
+
+
+			</ul>
+			<div class="pagination-2">
+					<ul class="pages">
+						<li class="page-ar-2"><<</li>
+						<li class="page-numb-2 active-page">1</li>
+						<li class="page-numb-2">2</li>
+						<li class="page-numb-2">3</li>
+						<li class="page-ar-2">>></li>
+					</ul>
+				</div>
+		</div>
+	</section>
+	<section class="s-2">
+		<div class="wrp-1000">
+			<div class="header-s-2">Здесь Вы можете оставить свою нужду,<br> благодарность или свидетельство</div>
+			<form action="{% url 'feedback' %}" method="post" class="need-form">
+                        {% csrf_token %}
+	<div class="need-wrp">
+					<ul>
+						<li>
+							<input id="id_subject_0" name="subject" type="radio" checked  value="ask" />
+                            <label for="id_subject_0"> Вопрос по урокам</label>
+						</li>
+						<li>
+							<input id="id_subject_1" name="subject" type="radio" value="need" />
+                            <label for="id_subject_1"> Нужда</label>
+						</li>
+						<li>
+							<input id="id_subject_2" name="subject" type="radio" value="thanks" />
+                            <label for="id_subject_2"> Благодарность</label>
+						</li>
+						<li>
+							<input id="id_subject_3" name="subject" type="radio" value="witness" />
+                            <label for="id_subject_3"> Свидетельство</label>
+						</li>
+					</ul>
+				</div>
+				<div class="text-area-block">
+					<textarea id="id_text" name="text" class="need-text" placeholder="Выберите ВОПРОС и введите сюда текст..."></textarea>
+                    <button type="submit">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="{% static 'js/to_need.js' %}"></script>
+<script src="{% static 'js/pagination.js' %}"></script>
+{% endblock %}

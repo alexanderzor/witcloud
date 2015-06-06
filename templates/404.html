@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block main_content %}
+
+{% block title %}Ошибка 404{% endblock %}
+<div class="block_white">
+    <p class="header-c">Ошибка 404</p>
+    <div class="body-c">
+
+        <p>К сожалению данной страницы не существует</p>
+        <p>Начните с <a href="{% url 'index' %}">главной</a> страницы</p>
+    </div>
+</div>
+	{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block main_content %}
+	<section class="s-1 custom-s1">
+		<div class="wrp-1000">
+			<div class="header-s-1 custom-marg">Вход в систему</div>
+			<form action="" method="post" class="main-form">
+                {% csrf_token %}
+				<div class="inputs">
+                    {{ login_form.email }}
+                    {{ login_form.password }}
+                    
+
+				</div>
+                <input type="submit" value="Войти" class="save_button">
+
+			</form>
+            <a href="{% url 'forgot_password' %}"> Забыли пароль? </a>
+			<div class="error"></div>
+		</div>
+	</section>
+
+	{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main_content %}
+	<div class="banner"></div>
+	<section class="s-1">
+		<div class="wrp-1000">
+			<div class="header-s-1 custom-marg-left">Консультанты</div>
+			<div class="floated-back"><a href="{% url 'index' %}">Назад в личный кабинет</a></div>
+		</div>
+	</section>
+	<section class="consult">
+		<div class="wrp-1000">
+			<ul class="consulting"> <!-- top -->
+                {% if consultants  %}
+                {% for consultant in consultants %}
+				<li class="firstli">
+					<div class="pic-consult" style="background-image: url('{{consultant.image.url}}');">
+						<div class="pop-up-consult">
+							<div class="append-200"></div>
+							<div class="social-link skype">{{consultant.skype }}</div>
+							<div class="social-link mail">{{consultant.email }}</div>
+							<div class="social-but"></div>
+							<div class="social-but"></div>
+						</div>
+					</div>
+					<div class="info-consult">
+						{{consultant.first_name }} {{consultant.last_name }}
+						<br>
+						<span>{{consultant.phone_number }}</span>
+					</div>
+                    <br>
+				</li>
+
+                {% endfor %}
+
+                {% else %}
+                <p>Пока нет активных консультантов</p>
+                {% endif %}
+
+			</ul>
+			<!--<ul class="consulting">
+				<li>
+					<div class="pic-consult">
+						<div class="pop-up-consult">
+							<div class="append-200"></div>
+							<div class="social-link skype">Here_is_my_nickname</div>
+							<div class="social-link mail">Here_is_my_mail@.com</div>
+							<div class="social-but"></div>
+							<div class="social-but"></div>
+						</div>
+					</div>
+					<div class="info-consult">
+						Влад Зозуля
+						<br>
+						<span>+3(093)252-23-91</span>
+					</div>
+				</li>
+
+			</ul>-->
+		</div>
+	</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="{% static 'js/consulting.js' %}"></script>
+{% endblock %}

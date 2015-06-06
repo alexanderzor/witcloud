@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Облако Свидетелей</title>
+     <!--   <link rel="shortcut icon"  href="{% static 'images/favicon.ico' %}">-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/media_queries.css' %}">
+<link type="text/css" href="{% static 'css/jquery.jscrollpane.css' %}" rel="stylesheet" media="all" />
+
+</head>
+<body>
+	<header>
+{% block header %}
+        {% if request.user.is_authenticated %}
+		<div class="wrp-1000">
+			<a href="{{SITE_DOMAIN_URL}}{% url 'index' %}">
+				<div class="logo-h"></div>
+			</a>
+			<nav class="nav-h">
+				<ul>
+					<a  href="{{SITE_DOMAIN_URL}}{% url 'index' %}"><li>Личный кабинет</li></a>
+
+					<a  href="{{SITE_DOMAIN_URL}}{% url 'private' %}"><li>Приватный эфир</li></a>
+					<a href="http://clw.com.ua{% url 'archive' %}">
+						<li>Архив</li>
+					</a>
+					<a href="{{SITE_DOMAIN_URL}}{% url 'consults' %}">
+						<li>Консультанты</li>
+					</a>
+					<a href="{{SITE_DOMAIN_URL}}{% url 'thank_board' %}">
+						<li>Благодарности</li>
+					</a>
+					<a href="{{SITE_DOMAIN_URL}}{% url 'need_board' %}">
+						<li>Доска нужд</li>
+					</a>
+				</ul>
+			</nav>
+			<div class="user-h">
+				<ul class="drop-menu">
+					<a href="{% url 'settings_view' %}"><li>Настройка профиля</li></a>
+                    <a href="{% url 'logout_view' %}"><li>Выйти</li></a>
+				</ul>
+{% if request.user.image  %} <div class="user-logo-pic" style="background-image: url('{{ request.user.image.url }}'); margin-top: 10px; margin-right: 1px;" ></div>
+
+{% else %}  <div class="user-logo"></div>
+{% endif %}
+
+    <p style="text-align: center;">{{ request.user.last_name }} {{request.user.first_name }} </p>
+
+   </div>
+
+
+			</div>
+		</div>
+          {% else %}
+        <div class="wrp-1000">
+			<a href="">
+				<div class="logo-h"></div>
+			</a>
+			<div class="any-quests">По всем техническим вопросам пишите на почту ponyaid@gmail.com</div>
+            <div class="log-in">Войти в личный кабинет</div>
+		</div>
+
+        {% endif %}
+        {% endblock %}
+	</header>
+{% block main_content %}
+{% endblock %}
+	<section class="s-3">
+		<div class="wrp-1000">
+			<p class="help-f">Если у Вас есть вопросы по созданию личного кабинета, а также по <br>
+			любым другим вопросам, обращайтесь к нашим консультантам за помощью<br>
+			или отправьте нам сообщение на e-mail: <span>oblakosvideteley@gmail.com</span></p>
+			<div class="contacts">
+				<ul>
+					<li>+38 (097) 883-95-21</li>
+					<li>+38 (097) 883-82-60</li>
+					<li>+38 (097) 883-82-65</li>
+					<li>+38 (096) 881-06-17</li>
+					<li>+38 (096) 202-75-79 </li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<p class="copyrights">Copyright © 1998-2015 clw.com.ua. Все права защищены</p>
+	</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- the mousewheel plugin - optional to provide mousewheel support -->
+
+<script type="text/javascript" src="{% static 'js/jquery.mousewheel.js' %}"></script>
+
+
+
+<!-- the jScrollPane script -->
+
+<script type="text/javascript" src="{% static 'js/jquery.jscrollpane.min.js' %}"></script>
+<script>
+
+        $(function()
+
+            {
+
+                $('.scroll-pane').jScrollPane({autoReinitialise: true});
+
+            });
+
+    </script>
+	<script src="{% static 'js/header_menu.js' %}"></script>
+	<script src="{% static 'js/login.js' %}"></script>
+	<script src="{% static 'js/forms.js' %}"></script>
+	<script src="{% static  'js/videos.js' %}"></script>
+        <script src="{% static  'js/video_2.js' %}"></script>
+<!-- Yandex.Metrika counter -->
+
+<script type="text/javascript">
+
+(function (d, w, c) {
+
+    (w[c] = w[c] || []).push(function() {
+
+        try {
+
+            w.yaCounter29885899 = new Ya.Metrika({id:29885899,
+
+                    clickmap:true,
+
+                    trackLinks:true,
+
+                    accurateTrackBounce:true});
+
+        } catch(e) { }
+
+    });
+
+
+
+    var n = d.getElementsByTagName("script")[0],
+
+        s = d.createElement("script"),
+
+        f = function () { n.parentNode.insertBefore(s, n); };
+
+    s.type = "text/javascript";
+
+    s.async = true;
+
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+
+
+    if (w.opera == "[object Opera]") {
+
+        d.addEventListener("DOMContentLoaded", f, false);
+
+    } else { f(); }
+
+})(document, window, "yandex_metrika_callbacks");
+
+</script>
+
+<noscript><div><img src="//mc.yandex.ru/watch/29885899" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

@@ -1,0 +1,1075 @@
+@media screen and (max-width: 1100px) {
+    /*1.html*/
+     .banner {
+        background-size: cover;
+        height: 400px;
+    }
+     /*1.html*/
+    .h2 {
+        background-size: cover;
+        height: 550px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+     /*1.html*/
+    .wrp-1000 {
+        width: 100%;
+    }
+    
+    .logo-h {
+        display: none;
+    }
+    
+    nav.nav-h {
+        width: 100%;
+    }
+    
+    nav.nav-h ul {
+        width: 100%;
+    }
+    
+   nav.nav-h ul a, .user-h {
+        display: inline-block;
+        width: 100% !important;
+         margin-right: 0;
+    }
+    
+    nav.nav-h ul a li {
+        padding: 10px 0;
+        width: 100%;   
+    }
+    
+    .user-logo {
+        padding: 0;
+        height: 40px;
+        background-position: -42px 5px;
+    }
+    
+        .user-h:hover  .user-logo {
+            background-position: 4px 5px;
+        }
+    
+    .user-h {
+        padding: 0;
+    }
+    
+    .user-h p {
+        margin-top: 5px;
+        text-align: center;
+    }
+    
+    .video-wrp video {
+        width: 100%;
+        height: auto;
+    } 
+    
+    aside.video-nav {
+        margin: 20px auto 0 auto;
+        display: block;
+        width: 100%;
+    }
+    
+    .watch {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .enter-but {
+        float: none;
+        display: block;
+        margin: 10px auto 0 auto;
+    }
+    
+    .text-test {
+        width: 500px;
+    }
+    
+    .text-test ul li {
+        font-size: 1.1em;
+    }
+    
+    .muntyan {
+        width: 150px;
+        height: 265px;
+    }
+    
+    /*2.html*/
+    
+    .any-quests {
+         margin-left: 0;   
+    }
+
+    .log-in {
+        margin-bottom: 15px;
+    }
+    
+    /*3.html*/
+    
+    ul.drop-menu {
+        width: 100%;
+    }
+    
+    ul.drop-menu li {
+        text-align: center;
+    }
+    
+    /*7.html*/
+    
+    .wood {
+        height: auto;
+    }
+    
+    ul.notes {
+        padding-bottom: 50px;
+    }
+    
+    /*8.html*/
+    
+    .paper-wrap {
+        width: 100%;
+    }
+    
+    .picture-ribbons {
+        width: 99.4%;
+    }
+    
+    ul.all-thanxs li {
+        width: 80%;
+        padding: 12px 3.5%;
+    }
+    
+    /*index.html*/
+    
+    .body-ch {
+        width: 50%;
+    }
+    
+    .chat-form {
+        width: 45%;
+        margin-left: 3%;
+    }
+    
+    textarea.chat {
+        width: 90%;
+        padding: 10px 5%;
+    }
+    
+    .chat-form-but {
+        width: 100%;
+    }
+    
+    /*forbidd.html*/
+    
+    .wrp-forbidd {
+        width: 50%;
+        padding: 60px 12.5%;
+        font-size: 2em;
+    }
+    
+    a.to-cabinet {
+        width: 90%;
+        padding: 35px 5%;
+    }
+    
+    section.forbidd {
+        padding: 20px 0;
+    }
+    
+    /*5.html*/
+    
+    .wrp-1000-back {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .icon-cal {
+        display: none;
+    }
+    
+    .calendar {
+        margin-top: 0;
+    }
+    
+    .floated-back {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .header-s-1-2 {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    
+    .background-all {
+        background-image: none;
+    }
+    
+    .film-vid {
+        width: 72%;
+    }
+    
+    .pop-up {
+        width: 100%;
+        height: 140px;
+        left: 0;
+    }
+    
+     .film-vid .img {
+         width: 100%;
+         height: 140px;
+         background-size: cover;
+     }
+    
+    .video-info {
+        width: 19%;
+        margin-left: 2%;
+        font-size: .8em;
+    }
+    
+    ul.video-lesson {
+        height: auto;
+    }
+    
+    .wrp-video iframe {
+        width: 500px;
+        height: 333.75px;
+    }
+    
+    .header-s-1 {
+        margin-left: 0;
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 985px) {
+    .custom-inp {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+    form.search {
+        margin-top: 20px;
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 885px) {
+     /*1.html*/
+    html, body {
+        font-size: 14px;
+    }
+    
+    .banner {
+        height: 300px;
+    }
+    
+    textarea.need-text {
+        width: 300px;
+    }
+    
+    .need-form button {
+        width: 322px;
+    }
+    
+    section.s-2 {
+        height: auto;
+        padding: 20px 0;
+    }
+    
+    /*2.html*/
+    .h2 {
+        height: 445px;
+    }
+    
+    /*3.html*/
+    
+   /* .header-s-1 {
+        margin-left: -150px;
+    } */
+    
+    .pick-file {
+        margin-right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 865px) {
+    ul.consulting {
+        margin-bottom: 5px !important;
+    }
+    
+    ul.consulting li {
+         margin-right: 5px;   
+    }
+    
+    li.lastli {
+        margin-right: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 815px) {
+    .inputs input {
+        width: 25%;
+        padding: 14px 2.5%;
+    }
+    
+    form.main-form button {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        padding: 15px 0;
+    }
+    
+    /*3.html*/
+    
+    input.nns {
+        width: 95%;
+        padding: 14px 2.5%;
+        margin-right: 5px;
+    }
+    
+    .inputs ul li {
+        margin-right: 4.5px;
+    }
+    
+    .floated-back {
+        float: none;
+        display: block;
+        padding-top: 10px;
+        margin: 0 auto 0 auto;
+    }
+    
+    .header-s-1 {
+        margin-left: 0;
+    }
+    
+    /*4.html*/
+    
+    button.save-button {
+        margin-top: 20px !important;
+        width: 35% !important;
+    }
+    
+    input.marg-right-20 {
+        width: 65%;
+        padding: 14px 2.5%;
+        margin-right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 780px) {
+    .header-wood {
+        width: 450px;
+        height: 102.2px;
+        padding-top: 17px; 
+    }
+    
+    ul.nav-hw li {
+        margin-right: 20px;
+    }
+    
+    .left-ribbon {
+        left: 10px;
+    }
+    
+    .right-ribbon {
+        right: 10px;
+    }
+
+    .picture-ribbons {
+        font-size: 1.4em;
+    }
+    
+    .wrp-forbidd {
+        font-size: 1.5em;
+    }
+    
+    a.to-cabinet {
+        padding: 15px 2.5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 745px) {
+    .log-in {
+        margin: 15px 0  15px 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 710px) {
+    .text-test {
+         width: 400px;   
+    }
+    
+    .paper-wrap {
+        height: auto;
+    }
+    
+    ul.all-thanxs {
+        padding-bottom: 80px;
+    }
+    
+    /*5.html*/
+    
+    .film-vid {
+        width: 70%;
+        height: 100px;
+    }
+    
+    .pop-up {
+        height: 100px;
+    }
+    
+    .film-vid .img {
+        height: 100px;
+    }
+    
+    .play-but, .read-but {
+        margin-top: 12.5px;
+    }
+    
+    .video-info {
+        width: 25%;
+        margin-left: 0.2%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 690px) {
+    /*1.html*/
+    .banner {
+        height: 250px;    
+    }
+    
+    .header-second {
+        font-size: 1.2em;
+    }
+    
+    .header-s-1 {
+        font-size: 1.35em;
+    }
+    
+    .header-s-2 {
+        font-size: 1.5em;
+    }
+    /*2.html*/
+    .h2 {
+        height: 400px;
+    }
+    
+    /*5.html*/
+    
+    .header-s-1-2 {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 625px) {
+    .body-ch {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .chat-form {
+        margin-top: 20px;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    textarea.chat {
+        height: 120px;
+    }
+    
+    .wrp-video iframe {
+        width: 300px;
+        height: 200.25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 610px) {
+    .muntyan {
+        display: none;
+    }
+    
+    .text-test {
+        display: block;
+        width: 95%;
+        padding: 0 2.5%;
+        margin: 0 auto;
+    }
+    
+    .header-tt {
+        text-align: center;    
+    }
+    
+    .need-wrp {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .need-wrp ul {
+        display: block;
+        width: 95%;
+        padding: 0 2.5%;
+    }
+    
+    .need-wrp ul label {
+        width: 100%;
+    }
+    
+    .text-area-block {
+        display: block;
+        widtH: 95%;
+        paddin: 0 2.5%;
+        margin: 0 auto;
+    }
+    
+    textarea.need-text {
+        width: 95%;
+        padding: 10px 2.5%;
+    }
+    
+     .need-form button {
+        width: 100.3%;
+    }
+    
+    /*8.html*/
+    
+    .picture-ribbons {
+        font-size: 1.7em;
+        line-height: 130px;
+    }
+    
+    .ribbon-text {
+        line-height: normal;
+    }
+    
+    .left-ribbon {
+        font-size: 12px;
+    }
+    
+    .left-ribbon a {
+        display: inline-block;
+        margin-top: 3px;
+    }
+    
+    .right-ribbon:before {
+        margin-right: 5px;
+    }
+}
+    
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 610px) {
+    .inputs ul {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .inputs ul li {
+        width: 70%;
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .inputs ul li input.nns {
+        width: 95%;
+        padding: 14px 2.5%;
+    }
+    
+    .inputs input {
+        width: 65%;
+        padding: 14px 2.5%;
+    }
+    
+    input.nns {
+        width: 65%;
+        padding: 14px 2.5%;
+    }
+    
+    button.save-button {
+        width: 55% !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 575px) {
+    /*1.html*/
+    .banner {
+        display: none;
+    }
+     /*2.html*/
+    .h2 {
+        height: 300px;
+    }
+    .video-info {
+        display: none;
+    }
+    .film-vid {
+        width: 95%;
+    }
+    
+    .log-window {
+        padding: 30px 40px 15px 40px;
+    }
+    
+    .forgot-pass {
+        width: 349px;
+    }
+}
+    
+
+
+
+
+
+
+
+
+@media screen and (max-width: 550px) {
+    li.firstli {
+        margin-right: 0;
+    }
+    
+    .wrp-forbidd {
+        width: 100%;
+        padding: 30px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 510px) {
+    .header-s-2 {
+        font-size: 1.3em;
+    }
+    section.s-1 {
+        padding-top: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 470px) {
+    .header-wood {
+        width: 320px;
+        height: 104.2px;
+        padding-top: 17px; 
+        font-size: 1em;
+    }
+    
+    ul.nav-hw li {
+        margin-right: 7px;
+        font-size: .95em;
+    }
+    
+    .header-hw {
+        font-size: 1.4em;
+    }
+    
+    ul.nav-hw {
+        margin-top: 15px;
+    }
+    
+    ul.nav-hw li:last-child:before {
+        content: url(../images/html7/add_small.png);
+        margin-right: 3px;
+    }
+    
+    .hover-text-add:before {
+        content: url(../images/html7/add_hover_small.png);
+        margin-right: 3px;
+    }
+    
+    ul.nav-hw li:last-child {
+        margin-top: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 450px) {
+    /*8.html*/
+    
+    .left-ribbon, .right-ribbon {
+        font-size: 12px;
+    }
+    
+    .right-ribbon {
+        margin-top: 7px;
+        right: 25px;
+    }
+    
+    .left-ribbon {
+        left: 5px;
+        font-size: 10px;
+        font-weight: 600;
+    }
+    
+    .right-ribbon:before {
+        content: url(../images/html8/add_cmall.png);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 415px) {
+    .enter-but {
+        width: 200px;
+    }
+    
+    p.watch {
+        font-size: 1.15em;
+    }
+    
+    .contacts ul li:last-child {
+        margin-right: 20px;
+    }
+    
+    .text-test ul li {
+        text-align: center;
+    }
+    
+    .archive {
+        width: 300px;
+    }
+    
+    .wrp-video {
+        padding: 15px 10px;
+    }
+    
+    .log-window {
+        padding: 20px 15px 10px 15px;
+    }
+    
+    .forgot-pass {
+        width: 300px;
+    }
+    
+    .close {
+        width: 16px;
+        height: 16px;
+    }
+}
+    
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 345px) {
+    .image-avatar {
+        width: 280px;
+    }
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -1,0 +1,18 @@
+from django.conf.urls import include, url
+from django.contrib import admin
+import accounts
+import broadcast
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from clw import settings
+urlpatterns = [
+    # Examples:
+    # url(r'^$', 'clw.views.home', name='home'),
+    url(r'^accounts/', include('accounts.urls')),
+    url(r'^broadcast/', include('broadcast.urls')),
+    #url(r'^chat/$', include('chat.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += staticfiles_urlpatterns()

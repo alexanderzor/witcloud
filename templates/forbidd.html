@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block main_content %}
+
+    <section class="forbidd">
+
+        <div class="wrp-1000">
+
+            <div class="wrp-forbidd">
+
+                Страница находится
+
+                <br>
+
+                <br>
+
+                в стадии разработки
+
+                <a href="{% url 'index' %}" class="to-cabinet">Назад в Личный Кабинет</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+	<section class="s-2">
+                <div class="wrp-1000">
+                        <div class="header-s-2">Здесь Вы можете оставить свою нужду,<br> благодарность или свидетельство</div>
+                        <form action="" method="post" class="need-form">
+                        {% csrf_token %}
+        <div class="need-wrp">
+                                        <ul>
+                                                <li>
+                                                        <input id="id_subject_0" name="subject" type="radio" value="Вопрос по урокам" />
+                            <label for="id_subject_0"> Вопрос по урокам</label>
+                                                </li>
+                                                <li>
+                                                        <input id="id_subject_1" name="subject" type="radio" value="Нужда" />
+                            <label for="id_subject_1"> Нужда</label>
+                                                </li>
+                                                <li>
+                                                        <input id="id_subject_2" name="subject" type="radio" value="Благодарность" />
+                            <label for="id_subject_2"> Благодарность</label>
+                                                </li>
+                                                <li>
+                                                        <input id="id_subject_3" name="subject" type="radio" value="Свидетельство" />
+                            <label for="id_subject_3"> Свидетельство</label>
+                                                </li>
+                                        </ul>
+
+
+				</div>
+                                <div class="text-area-block">
+                                        <textarea id="id_text" name="text" class="need-text" placeholder="Введите Ваш текст сюда..."></textarea>
+                    <button type="submit">Отправить</button>
+                                </div>
+                        </form>
+                </div>
+        </section>
+{% endblock %}
+
+
+	

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main_content %}
+
+<div class="banner"></div>
+	<section class="s-1">
+		<div class="wrp-1000">
+			<div class="header-s-1">Приватный эфир 4 измерения</div>
+			<div class="floated-back"><a href="{% url 'index' %}">Назад в личный кабинет</a></div>
+			<div class="block-video">
+				<div class="video-wrp">
+
+
+<video  controls width="600" height = "340" src="{{ video.video.url }}"></video>
+<a href="{% url 'archive' %}">					<div class="archive">Перейти в архив видео</div></a>
+				</div>
+<aside class="video-nav">
+					<div class="header-as">Приватный эфир</div>
+					<div class="body-as">
+						
+                        
+						<a href="http://clw.com.ua{% url 'private' video.title %}">
+                            <div class="post-as">
+							<p class="title-as">{{ video.verbose_title }}</p>
+							<p class="date-as">{{ video.date }}</p>
+						</div>
+                            </a>
+                       
+                       
+					</div>
+				</aside>
+			</div>
+			<div class="block-chat">
+				<p class="header-ch">Чат приватного эфира</p>
+				<div class="body-ch">
+					<div class="messages-ch">
+						<div class="post-ch">
+							<div class="info-ch">
+								<span class="who-ch">Разработчик,</span>
+								<span class="when-ch">18 Мая 2015 13:36:02</span>
+							</div>
+							<div class="mess-ch">Чат в стадии разработки</div>
+						</div>
+					</div>
+				</div>
+				<div class="chat-form">
+					<textarea name="message" class="chat" placeholder="Нажмите кнопку 'Отправить' или Enter, чтобы отправить сообщение"></textarea>
+					<div class="chat-form-but">Отправить</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<section class="s-2">
+		<div class="wrp-1000">
+			<div class="header-s-2">Здесь Вы можете оставить свою нужду,<br> благодарность или свидетельство</div>
+			<form action="{% url 'feedback' %}" method="post" class="need-form">
+                {% csrf_token %}
+				<div class="need-wrp">
+					<ul>
+						<li>
+							<input id="id_subject_0" name="subject" type="radio" checked  value="ask" />
+                            <label for="id_subject_0"> Вопрос по урокам</label>
+						</li>
+						<li>
+							<input id="id_subject_1" name="subject" type="radio" value="need" />
+                            <label for="id_subject_1"> Нужда</label>
+						</li>
+						<li>
+							<input id="id_subject_2" name="subject" type="radio" value="thanks" />
+                            <label for="id_subject_2"> Благодарность</label>
+						</li>
+						<li>
+							<input id="id_subject_3" name="subject" type="radio" value="witness" />
+                            <label for="id_subject_3"> Свидетельство</label>
+						</li>
+					</ul>
+				</div>
+				<div class="text-area-block">
+					<textarea id="id_text" name="text" class="need-text" placeholder="Выберите ВОПРОС и введите сюда текст..."></textarea>
+                    <button type="submit">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</section>
+<script src="{% static 'js/chat.js' %}"></script>
+{% endblock %}

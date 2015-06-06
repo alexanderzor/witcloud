@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main_content %}
+	<section class="wood-s">
+		<div class="wrp-1000">
+			<div class="wood">
+				<div class="header-wood">
+					<div class="header-hw">Доска молитвенных нужд</div>
+					<ul class="nav-hw">
+						<li class="ok-li"><a href="{% url 'need_board' 'all' %}">Все нужды</a></li>
+						<li class="ok-li"><a href="{% url 'need_board' 'my' %}">Мои нужды</a></li>
+						<li>Добавить</li>
+					</ul>	
+				</div>
+				<div class="body-wood">
+					<ul class="notes">
+                        {% for need in needs %}
+						<li class="vidli">
+							<p class="from-n">{{need.author.email}}</p>
+							<p class="date-n">{{need.date}}</p>
+							<div class="text-n scroll-pane">
+							<p>{{need.description}}</p>
+							</div>
+							<table class="ajax-table">
+								<tr>
+									<td class="left-align">
+									<a href="{% url 'vote' need.id  %}"><i class="ajax"></i></a>
+										{{need.voters.count}}
+									</td>
+								</tr>
+							</table>
+						</li>
+                        {% endfor %}
+
+					</ul>
+				</div>
+				<div class="pagination-2">
+					<ul class="pages">
+						<li class="page-ar-2 non-back"><<</li>
+						<li class="page-numb-2 active-page non-back">1</li>
+						<li class="page-numb-2 non-back">2</li>
+						<li class="page-numb-2 non-back">3</li>
+						<li class="page-ar-2 non-back">>></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="s-2">
+		<div class="wrp-1000">
+			<div class="header-s-2">Здесь Вы можете оставить свою нужду,<br> благодарность или свидетельство</div>
+			<form action="{% url 'feedback' %}" method="post" class="need-form">
+                        {% csrf_token %}
+	<div class="need-wrp">
+					<ul>
+						<li>
+							<input id="id_subject_0" name="subject" type="radio" checked  value="ask" />
+                            <label for="id_subject_0"> Вопрос по урокам</label>
+						</li>
+						<li>
+							<input id="id_subject_1" name="subject" type="radio" value="need" />
+                            <label for="id_subject_1"> Нужда</label>
+						</li>
+						<li>
+							<input id="id_subject_2" name="subject" type="radio" value="thanks" />
+                            <label for="id_subject_2"> Благодарность</label>
+						</li>
+						<li>
+							<input id="id_subject_3" name="subject" type="radio" value="witness" />
+                            <label for="id_subject_3"> Свидетельство</label>
+						</li>
+					</ul>
+				</div>
+				<div class="text-area-block">
+					<textarea id="id_text" name="text" class="need-text" placeholder="Выберите ВОПРОС и введите сюда текст..."></textarea>
+                    <button type="submit">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- the mousewheel plugin - optional to provide mousewheel support -->
+
+<script type="text/javascript" src="{% static 'js/jquery.mousewheel.js' %}"></script>
+
+
+
+<!-- the jScrollPane script -->
+
+<script type="text/javascript" src="{% static 'js/jquery.jscrollpane.min.js' %}"></script>
+
+
+	<script src="{% static 'js/need.js' %}"></script>
+
+	<script src="{% static 'js/pagination3.js' %}"></script>
+
+
+{% endblock %}
+

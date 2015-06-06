@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block main_content %}
+
+	<section class="s-1 custom-s1">
+		<div class="wrp-1000">
+			<div class="header-s-1 custom-marg">Загрузить видео</div>
+			<form enctype="multipart/form-data" method="post" class="user-form">
+                <div class="pick-file">
+                {% csrf_token %}
+                <div class="inputs">
+                    {{ form.title }}
+                    {{ form.verbose_title }}
+                </div>
+                <input id="id_file" name="file" type="file" />
+					<label for="id_file">
+                     <span>Обзор</span>
+					</label>
+
+                    <textarea cols="40" id="id_description" maxlength="400" name="description" rows="10" class="need-text" placeholder="Введите описание видео сюда..."></textarea>
+
+
+                <input type="submit" value="Сохранить" class="save_button">
+                    </div>
+            </form>
+			<div class="error"></div>
+		</div>
+	</section>
+{% endblock %}
