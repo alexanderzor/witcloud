@@ -16,14 +16,14 @@ class CustomUser(User):
     objects = UserManager()
 
     def has_voted(self, need):
-        if not Votes.objects.filter(need_id=need).first():
+        if not Votes.objects.filter(need_id=need, user_id=self).first():
             return False
         else:
             return True
 
     def vote(self, need):
         if not self.has_voted(need):
-            v = Votes.objects.create(user_id=self, need_id=need)
+            v = Votes(user_id=self, need_id=need)
             v.save()
 
 
@@ -55,7 +55,7 @@ class Need(models.Model):
     date = models.DateTimeField(auto_now=True)
     voters = models.ManyToManyField(CustomUser, through='Votes', through_fields=('need_id', 'user_id'))
     active = models.BooleanField(default=False)
-
+    
     class Meta:
         ordering = ['-date']
 

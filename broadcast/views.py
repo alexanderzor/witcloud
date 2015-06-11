@@ -106,4 +106,5 @@ def thank_board(request):
 def vote(request, key):
     need = Need.objects.get(id=int(key))
     request.user.vote(need)
+   # need.voters.add(request.user)
     return HttpResponseRedirect(reverse('need_board'))
